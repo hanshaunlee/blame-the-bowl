@@ -1,0 +1,7 @@
+__pycache__/
+*.egg-info/
+*.pyc
+paper/main.pdf
+paper/*.log
+paper/*.blg
+paper/*.aux

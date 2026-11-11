@@ -1,0 +1,3204 @@
+{
+ "none/B2": {
+  "summary": {
+   "distractor/adapt": [
+    0.6698564593301436,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.2857142857142857,
+    196
+   ],
+   "distractor/sequence": [
+    0.0,
+    205
+   ],
+   "distractor/tidy": [
+    0.0,
+    185
+   ],
+   "first/adapt": [
+    0.5567010309278351,
+    97
+   ],
+   "first/find": [
+    0.0,
+    41
+   ],
+   "first/tidy": [
+    0.0,
+    222
+   ],
+   "query/0": [
+    0.0,
+    90
+   ],
+   "query/1": [
+    0.0,
+    90
+   ],
+   "query/3": [
+    0.0,
+    90
+   ],
+   "query/7": [
+    0.0,
+    90
+   ],
+   "query_task/adapt": [
+    0.0,
+    97
+   ],
+   "query_task/find": [
+    0.0,
+    263
+   ],
+   "single/adapt": [
+    0.75,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.2916666666666667,
+    48
+   ],
+   "single/sequence": [
+    0.0,
+    48
+   ],
+   "single/tidy": [
+    0.0,
+    48
+   ]
+  },
+  "frac_frame": NaN,
+  "composition": {},
+  "secs": 19.766441345214844
+ },
+ "recency_sym/B2": {
+  "summary": {
+   "distractor/adapt": [
+    1.0,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.7704081632653061,
+    196
+   ],
+   "distractor/sequence": [
+    0.0,
+    205
+   ],
+   "distractor/tidy": [
+    0.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.4634146341463415,
+    41
+   ],
+   "first/tidy": [
+    0.0,
+    222
+   ],
+   "query/0": [
+    0.2111111111111111,
+    90
+   ],
+   "query/1": [
+    0.022222222222222223,
+    90
+   ],
+   "query/3": [
+    0.0,
+    90
+   ],
+   "query/7": [
+    0.03333333333333333,
+    90
+   ],
+   "query_task/adapt": [
+    0.0,
+    97
+   ],
+   "query_task/find": [
+    0.09125475285171103,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.7083333333333334,
+    48
+   ],
+   "single/sequence": [
+    0.0,
+    48
+   ],
+   "single/tidy": [
+    0.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 231,
+   "picked": 178,
+   "delivered": 118,
+   "drawer_empty": 21,
+   "pressed": 75,
+   "placed_bin": 60,
+   "cue_seq": 37
+  },
+  "secs": 27.517907857894897
+ },
+ "recency_frame/B2": {
+  "summary": {
+   "distractor/adapt": [
+    0.9952153110047847,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.7653061224489796,
+    196
+   ],
+   "distractor/sequence": [
+    0.02926829268292683,
+    205
+   ],
+   "distractor/tidy": [
+    0.010810810810810811,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.4634146341463415,
+    41
+   ],
+   "first/tidy": [
+    0.009009009009009009,
+    222
+   ],
+   "query/0": [
+    0.14444444444444443,
+    90
+   ],
+   "query/1": [
+    0.0,
+    90
+   ],
+   "query/3": [
+    0.0,
+    90
+   ],
+   "query/7": [
+    0.011111111111111112,
+    90
+   ],
+   "query_task/adapt": [
+    0.0,
+    97
+   ],
+   "query_task/find": [
+    0.053231939163498096,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.7083333333333334,
+    48
+   ],
+   "single/sequence": [
+    0.020833333333333332,
+    48
+   ],
+   "single/tidy": [
+    0.0,
+    48
+   ]
+  },
+  "frac_frame": 1.0,
+  "composition": {
+   "drawer/frame": 230,
+   "drawer_empty/frame": 23,
+   "picked/frame": 177,
+   "delivered/frame": 117,
+   "cue_seq/frame": 32,
+   "pressed/frame": 80,
+   "placed_bin/frame": 60,
+   "session/frame": 1
+  },
+  "secs": 28.673802375793457
+ },
+ "random/B2": {
+  "summary": {
+   "distractor/adapt": [
+    0.8133971291866029,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.3826530612244898,
+    196
+   ],
+   "distractor/sequence": [
+    0.0,
+    205
+   ],
+   "distractor/tidy": [
+    0.005405405405405406,
+    185
+   ],
+   "first/adapt": [
+    0.9896907216494846,
+    97
+   ],
+   "first/find": [
+    0.2926829268292683,
+    41
+   ],
+   "first/tidy": [
+    0.10810810810810811,
+    222
+   ],
+   "query/0": [
+    0.3,
+    90
+   ],
+   "query/1": [
+    0.2,
+    90
+   ],
+   "query/3": [
+    0.07777777777777778,
+    90
+   ],
+   "query/7": [
+    0.03333333333333333,
+    90
+   ],
+   "query_task/adapt": [
+    0.20618556701030927,
+    97
+   ],
+   "query_task/find": [
+    0.13307984790874525,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.6458333333333334,
+    48
+   ],
+   "single/sequence": [
+    0.041666666666666664,
+    48
+   ],
+   "single/tidy": [
+    0.08333333333333333,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 296,
+   "picked": 64,
+   "strat_fail": 57,
+   "delivered": 40,
+   "session": 108,
+   "drawer_empty": 35,
+   "strat_ok": 27,
+   "cue_seq": 38,
+   "cue_count": 12,
+   "placed_bin": 22,
+   "pressed": 21
+  },
+  "secs": 28.54534125328064
+ },
+ "scripted_mem/B2": {
+  "summary": {
+   "distractor/adapt": [
+    0.9425837320574163,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.7653061224489796,
+    196
+   ],
+   "distractor/sequence": [
+    0.05853658536585366,
+    205
+   ],
+   "distractor/tidy": [
+    0.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.4634146341463415,
+    41
+   ],
+   "first/tidy": [
+    0.0,
+    222
+   ],
+   "query/0": [
+    0.7111111111111111,
+    90
+   ],
+   "query/1": [
+    0.13333333333333333,
+    90
+   ],
+   "query/3": [
+    0.03333333333333333,
+    90
+   ],
+   "query/7": [
+    0.044444444444444446,
+    90
+   ],
+   "query_task/adapt": [
+    0.29896907216494845,
+    97
+   ],
+   "query_task/find": [
+    0.20532319391634982,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.7083333333333334,
+    48
+   ],
+   "single/sequence": [
+    0.020833333333333332,
+    48
+   ],
+   "single/tidy": [
+    0.0,
+    48
+   ]
+  },
+  "frac_frame": NaN,
+  "composition": {
+   "drawer": 278,
+   "strat_ok": 78,
+   "drawer_empty": 34,
+   "strat_fail": 8
+  },
+  "secs": 25.6518235206604
+ },
+ "scripted_mem_dropfail/B2": {
+  "summary": {
+   "distractor/adapt": [
+    0.6698564593301436,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.7653061224489796,
+    196
+   ],
+   "distractor/sequence": [
+    0.05853658536585366,
+    205
+   ],
+   "distractor/tidy": [
+    0.0,
+    185
+   ],
+   "first/adapt": [
+    0.5567010309278351,
+    97
+   ],
+   "first/find": [
+    0.4634146341463415,
+    41
+   ],
+   "first/tidy": [
+    0.0,
+    222
+   ],
+   "query/0": [
+    0.5555555555555556,
+    90
+   ],
+   "query/1": [
+    0.16666666666666666,
+    90
+   ],
+   "query/3": [
+    0.03333333333333333,
+    90
+   ],
+   "query/7": [
+    0.05555555555555555,
+    90
+   ],
+   "query_task/adapt": [
+    0.18556701030927836,
+    97
+   ],
+   "query_task/find": [
+    0.20912547528517111,
+    263
+   ],
+   "single/adapt": [
+    0.75,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.7083333333333334,
+    48
+   ],
+   "single/sequence": [
+    0.020833333333333332,
+    48
+   ],
+   "single/tidy": [
+    0.0,
+    48
+   ]
+  },
+  "frac_frame": NaN,
+  "composition": {
+   "drawer": 288,
+   "strat_ok": 61,
+   "drawer_empty": 34
+  },
+  "secs": 26.20462679862976
+ },
+ "oracle/B2": {
+  "summary": {
+   "distractor/adapt": [
+    0.6555023923444976,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.3112244897959184,
+    196
+   ],
+   "distractor/sequence": [
+    0.0,
+    205
+   ],
+   "distractor/tidy": [
+    0.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.4634146341463415,
+    41
+   ],
+   "first/tidy": [
+    0.0,
+    222
+   ],
+   "query/0": [
+    0.8111111111111111,
+    90
+   ],
+   "query/1": [
+    0.8333333333333334,
+    90
+   ],
+   "query/3": [
+    0.7777777777777778,
+    90
+   ],
+   "query/7": [
+    0.7666666666666667,
+    90
+   ],
+   "query_task/adapt": [
+    0.9896907216494846,
+    97
+   ],
+   "query_task/find": [
+    0.7262357414448669,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.7083333333333334,
+    48
+   ],
+   "single/sequence": [
+    0.0,
+    48
+   ],
+   "single/tidy": [
+    0.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 488,
+   "strat_ok": 97,
+   "picked": 97,
+   "drawer_empty": 38
+  },
+  "secs": 28.624322652816772
+ },
+ "learned_both_sym/B2": {
+  "summary": {
+   "distractor/adapt": [
+    1.0,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.8112244897959183,
+    196
+   ],
+   "distractor/sequence": [
+    0.24390243902439024,
+    205
+   ],
+   "distractor/tidy": [
+    0.24864864864864866,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.6097560975609756,
+    41
+   ],
+   "first/tidy": [
+    0.26576576576576577,
+    222
+   ],
+   "query/0": [
+    0.12222222222222222,
+    90
+   ],
+   "query/1": [
+    0.06666666666666667,
+    90
+   ],
+   "query/3": [
+    0.03333333333333333,
+    90
+   ],
+   "query/7": [
+    0.08888888888888889,
+    90
+   ],
+   "query_task/adapt": [
+    0.10309278350515463,
+    97
+   ],
+   "query_task/find": [
+    0.06844106463878327,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.7708333333333334,
+    48
+   ],
+   "single/sequence": [
+    0.3125,
+    48
+   ],
+   "single/tidy": [
+    0.1875,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "session": 288,
+   "drawer": 160,
+   "delivered": 25,
+   "drawer_empty": 11,
+   "strat_fail": 43,
+   "cue_seq": 95,
+   "pressed": 21,
+   "placed_bin": 42,
+   "strat_ok": 35
+  },
+  "secs": 64.65034461021423
+ },
+ "learned_online_sym/B2": {
+  "summary": {
+   "distractor/adapt": [
+    1.0,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.8112244897959183,
+    196
+   ],
+   "distractor/sequence": [
+    0.25853658536585367,
+    205
+   ],
+   "distractor/tidy": [
+    0.24864864864864866,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.6097560975609756,
+    41
+   ],
+   "first/tidy": [
+    0.26576576576576577,
+    222
+   ],
+   "query/0": [
+    0.14444444444444443,
+    90
+   ],
+   "query/1": [
+    0.05555555555555555,
+    90
+   ],
+   "query/3": [
+    0.05555555555555555,
+    90
+   ],
+   "query/7": [
+    0.1,
+    90
+   ],
+   "query_task/adapt": [
+    0.13402061855670103,
+    97
+   ],
+   "query_task/find": [
+    0.07224334600760456,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.7708333333333334,
+    48
+   ],
+   "single/sequence": [
+    0.3125,
+    48
+   ],
+   "single/tidy": [
+    0.1875,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 274,
+   "delivered": 114,
+   "strat_fail": 60,
+   "drawer_empty": 17,
+   "cue_seq": 56,
+   "pressed": 56,
+   "placed_bin": 75,
+   "cue_count": 43,
+   "strat_ok": 23,
+   "picked": 2
+  },
+  "secs": 60.815637826919556
+ },
+ "learned_sleep_sym/B2": {
+  "summary": {
+   "distractor/adapt": [
+    0.6698564593301436,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.30612244897959184,
+    196
+   ],
+   "distractor/sequence": [
+    0.0,
+    205
+   ],
+   "distractor/tidy": [
+    0.0,
+    185
+   ],
+   "first/adapt": [
+    0.5567010309278351,
+    97
+   ],
+   "first/find": [
+    0.0,
+    41
+   ],
+   "first/tidy": [
+    0.0,
+    222
+   ],
+   "query/0": [
+    0.15555555555555556,
+    90
+   ],
+   "query/1": [
+    0.18888888888888888,
+    90
+   ],
+   "query/3": [
+    0.08888888888888889,
+    90
+   ],
+   "query/7": [
+    0.022222222222222223,
+    90
+   ],
+   "query_task/adapt": [
+    0.25773195876288657,
+    97
+   ],
+   "query_task/find": [
+    0.060836501901140684,
+    263
+   ],
+   "single/adapt": [
+    0.75,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.2916666666666667,
+    48
+   ],
+   "single/sequence": [
+    0.0,
+    48
+   ],
+   "single/tidy": [
+    0.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 585,
+   "strat_fail": 67,
+   "strat_ok": 15,
+   "drawer_empty": 46,
+   "pressed": 7
+  },
+  "secs": 42.82514929771423
+ },
+ "learned_split_sym/B2": {
+  "summary": {
+   "distractor/adapt": [
+    1.0,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.4897959183673469,
+    196
+   ],
+   "distractor/sequence": [
+    0.0,
+    205
+   ],
+   "distractor/tidy": [
+    0.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.0,
+    41
+   ],
+   "first/tidy": [
+    0.0,
+    222
+   ],
+   "query/0": [
+    0.13333333333333333,
+    90
+   ],
+   "query/1": [
+    0.25555555555555554,
+    90
+   ],
+   "query/3": [
+    0.06666666666666667,
+    90
+   ],
+   "query/7": [
+    0.14444444444444443,
+    90
+   ],
+   "query_task/adapt": [
+    0.28865979381443296,
+    97
+   ],
+   "query_task/find": [
+    0.09885931558935361,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.5625,
+    48
+   ],
+   "single/sequence": [
+    0.0,
+    48
+   ],
+   "single/tidy": [
+    0.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 235,
+   "strat_fail": 97,
+   "drawer_empty": 28
+  },
+  "secs": 63.353179931640625
+ },
+ "none/B4": {
+  "summary": {
+   "distractor/adapt": [
+    0.6698564593301436,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.2857142857142857,
+    196
+   ],
+   "distractor/sequence": [
+    0.0,
+    205
+   ],
+   "distractor/tidy": [
+    0.0,
+    185
+   ],
+   "first/adapt": [
+    0.5567010309278351,
+    97
+   ],
+   "first/find": [
+    0.0,
+    41
+   ],
+   "first/tidy": [
+    0.0,
+    222
+   ],
+   "query/0": [
+    0.0,
+    90
+   ],
+   "query/1": [
+    0.0,
+    90
+   ],
+   "query/3": [
+    0.0,
+    90
+   ],
+   "query/7": [
+    0.0,
+    90
+   ],
+   "query_task/adapt": [
+    0.0,
+    97
+   ],
+   "query_task/find": [
+    0.0,
+    263
+   ],
+   "single/adapt": [
+    0.75,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.2916666666666667,
+    48
+   ],
+   "single/sequence": [
+    0.0,
+    48
+   ],
+   "single/tidy": [
+    0.0,
+    48
+   ]
+  },
+  "frac_frame": NaN,
+  "composition": {},
+  "secs": 19.071587562561035
+ },
+ "recency_sym/B4": {
+  "summary": {
+   "distractor/adapt": [
+    0.9473684210526315,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.9489795918367347,
+    196
+   ],
+   "distractor/sequence": [
+    1.0,
+    205
+   ],
+   "distractor/tidy": [
+    1.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.8777777777777778,
+    90
+   ],
+   "query/1": [
+    0.03333333333333333,
+    90
+   ],
+   "query/3": [
+    0.044444444444444446,
+    90
+   ],
+   "query/7": [
+    0.03333333333333333,
+    90
+   ],
+   "query_task/adapt": [
+    0.29896907216494845,
+    97
+   ],
+   "query_task/find": [
+    0.22813688212927757,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    1.0,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 498,
+   "drawer_empty": 42,
+   "strat_fail": 70,
+   "strat_ok": 75,
+   "picked": 226,
+   "delivered": 129,
+   "cue_seq": 56,
+   "pressed": 168,
+   "session": 56,
+   "cue_count": 24,
+   "placed_bin": 96
+  },
+  "secs": 31.093767642974854
+ },
+ "recency_frame/B4": {
+  "summary": {
+   "distractor/adapt": [
+    0.9952153110047847,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.9540816326530612,
+    196
+   ],
+   "distractor/sequence": [
+    0.06829268292682927,
+    205
+   ],
+   "distractor/tidy": [
+    1.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.4111111111111111,
+    90
+   ],
+   "query/1": [
+    0.022222222222222223,
+    90
+   ],
+   "query/3": [
+    0.0,
+    90
+   ],
+   "query/7": [
+    0.022222222222222223,
+    90
+   ],
+   "query_task/adapt": [
+    0.1134020618556701,
+    97
+   ],
+   "query_task/find": [
+    0.11406844106463879,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    0.041666666666666664,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 1.0,
+  "composition": {
+   "drawer/frame": 497,
+   "drawer_empty/frame": 44,
+   "strat_fail/frame": 58,
+   "strat_ok/frame": 79,
+   "picked/frame": 230,
+   "delivered/frame": 133,
+   "cue_seq/frame": 144,
+   "pressed/frame": 80,
+   "session/frame": 55,
+   "cue_count/frame": 24,
+   "placed_bin/frame": 96
+  },
+  "secs": 29.933784008026123
+ },
+ "random/B4": {
+  "summary": {
+   "distractor/adapt": [
+    0.9090909090909091,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.49489795918367346,
+    196
+   ],
+   "distractor/sequence": [
+    0.014634146341463415,
+    205
+   ],
+   "distractor/tidy": [
+    0.11351351351351352,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.6555555555555556,
+    90
+   ],
+   "query/1": [
+    0.36666666666666664,
+    90
+   ],
+   "query/3": [
+    0.2,
+    90
+   ],
+   "query/7": [
+    0.03333333333333333,
+    90
+   ],
+   "query_task/adapt": [
+    0.3711340206185567,
+    97
+   ],
+   "query_task/find": [
+    0.29277566539923955,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    0.2916666666666667,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "session": 260,
+   "drawer": 547,
+   "drawer_empty": 41,
+   "strat_fail": 118,
+   "delivered": 84,
+   "strat_ok": 56,
+   "picked": 139,
+   "cue_seq": 85,
+   "pressed": 43,
+   "cue_count": 28,
+   "placed_bin": 39
+  },
+  "secs": 33.88842749595642
+ },
+ "scripted_mem/B4": {
+  "summary": {
+   "distractor/adapt": [
+    0.9712918660287081,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.9540816326530612,
+    196
+   ],
+   "distractor/sequence": [
+    1.0,
+    205
+   ],
+   "distractor/tidy": [
+    1.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.9888888888888889,
+    90
+   ],
+   "query/1": [
+    0.4888888888888889,
+    90
+   ],
+   "query/3": [
+    0.1,
+    90
+   ],
+   "query/7": [
+    0.05555555555555555,
+    90
+   ],
+   "query_task/adapt": [
+    0.422680412371134,
+    97
+   ],
+   "query_task/find": [
+    0.40304182509505704,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    1.0,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": NaN,
+  "composition": {
+   "drawer": 681,
+   "drawer_empty": 59,
+   "strat_ok": 113,
+   "strat_fail": 12
+  },
+  "secs": 26.383525133132935
+ },
+ "scripted_mem_dropfail/B4": {
+  "summary": {
+   "distractor/adapt": [
+    0.6698564593301436,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.9540816326530612,
+    196
+   ],
+   "distractor/sequence": [
+    1.0,
+    205
+   ],
+   "distractor/tidy": [
+    1.0,
+    185
+   ],
+   "first/adapt": [
+    0.5567010309278351,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.8333333333333334,
+    90
+   ],
+   "query/1": [
+    0.4777777777777778,
+    90
+   ],
+   "query/3": [
+    0.1,
+    90
+   ],
+   "query/7": [
+    0.044444444444444446,
+    90
+   ],
+   "query_task/adapt": [
+    0.23711340206185566,
+    97
+   ],
+   "query_task/find": [
+    0.41064638783269963,
+    263
+   ],
+   "single/adapt": [
+    0.75,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    1.0,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": NaN,
+  "composition": {
+   "drawer": 694,
+   "drawer_empty": 61,
+   "strat_ok": 79
+  },
+  "secs": 26.997424840927124
+ },
+ "oracle/B4": {
+  "summary": {
+   "distractor/adapt": [
+    0.6746411483253588,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.3469387755102041,
+    196
+   ],
+   "distractor/sequence": [
+    0.0,
+    205
+   ],
+   "distractor/tidy": [
+    0.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.9777777777777777,
+    90
+   ],
+   "query/1": [
+    0.9888888888888889,
+    90
+   ],
+   "query/3": [
+    0.9666666666666667,
+    90
+   ],
+   "query/7": [
+    1.0,
+    90
+   ],
+   "query_task/adapt": [
+    0.9896907216494846,
+    97
+   ],
+   "query_task/find": [
+    0.9809885931558935,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    1.0,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 952,
+   "drawer_empty": 81,
+   "strat_ok": 97,
+   "strat_fail": 97,
+   "picked": 116,
+   "delivered": 97
+  },
+  "secs": 33.89273715019226
+ },
+ "learned_both_sym/B4": {
+  "summary": {
+   "distractor/adapt": [
+    0.9952153110047847,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.9591836734693877,
+    196
+   ],
+   "distractor/sequence": [
+    0.9951219512195122,
+    205
+   ],
+   "distractor/tidy": [
+    1.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.5333333333333333,
+    90
+   ],
+   "query/1": [
+    0.2111111111111111,
+    90
+   ],
+   "query/3": [
+    0.03333333333333333,
+    90
+   ],
+   "query/7": [
+    0.05555555555555555,
+    90
+   ],
+   "query_task/adapt": [
+    0.27835051546391754,
+    97
+   ],
+   "query_task/find": [
+    0.18250950570342206,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    1.0,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 790,
+   "strat_fail": 154,
+   "strat_ok": 76,
+   "drawer_empty": 68,
+   "session": 16,
+   "cue_seq": 192,
+   "pressed": 77,
+   "cue_count": 27,
+   "placed_bin": 39,
+   "delivered": 1
+  },
+  "secs": 67.19236946105957
+ },
+ "learned_both/B4": {
+  "summary": {
+   "distractor/adapt": [
+    0.9856459330143541,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.9540816326530612,
+    196
+   ],
+   "distractor/sequence": [
+    0.05853658536585366,
+    205
+   ],
+   "distractor/tidy": [
+    0.9945945945945946,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.4666666666666667,
+    90
+   ],
+   "query/1": [
+    0.2111111111111111,
+    90
+   ],
+   "query/3": [
+    0.05555555555555555,
+    90
+   ],
+   "query/7": [
+    0.03333333333333333,
+    90
+   ],
+   "query_task/adapt": [
+    0.14432989690721648,
+    97
+   ],
+   "query_task/find": [
+    0.20912547528517111,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    0.041666666666666664,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 0.6888888888888889,
+  "composition": {
+   "drawer": 445,
+   "session": 291,
+   "drawer_empty/frame": 14,
+   "drawer/frame": 75,
+   "picked": 73,
+   "strat_fail": 78,
+   "delivered": 41,
+   "drawer_empty": 40,
+   "picked/frame": 54,
+   "strat_ok/frame": 16,
+   "cue_seq": 83,
+   "pressed/frame": 51,
+   "pressed": 47,
+   "placed_bin/frame": 65,
+   "placed_bin": 23,
+   "cue_count": 23,
+   "strat_ok": 21
+  },
+  "secs": 64.71428537368774
+ },
+ "learned_online_sym/B4": {
+  "summary": {
+   "distractor/adapt": [
+    0.937799043062201,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.9591836734693877,
+    196
+   ],
+   "distractor/sequence": [
+    1.0,
+    205
+   ],
+   "distractor/tidy": [
+    1.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.8,
+    90
+   ],
+   "query/1": [
+    0.32222222222222224,
+    90
+   ],
+   "query/3": [
+    0.03333333333333333,
+    90
+   ],
+   "query/7": [
+    0.044444444444444446,
+    90
+   ],
+   "query_task/adapt": [
+    0.30927835051546393,
+    97
+   ],
+   "query_task/find": [
+    0.2965779467680608,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    1.0,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 664,
+   "drawer_empty": 58,
+   "delivered": 129,
+   "strat_fail": 113,
+   "strat_ok": 86,
+   "picked": 24,
+   "cue_seq": 200,
+   "pressed": 61,
+   "placed_bin": 75,
+   "cue_count": 29,
+   "session": 1
+  },
+  "secs": 65.20216464996338
+ },
+ "learned_sleep_sym/B4": {
+  "summary": {
+   "distractor/adapt": [
+    0.6698564593301436,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.32142857142857145,
+    196
+   ],
+   "distractor/sequence": [
+    0.0,
+    205
+   ],
+   "distractor/tidy": [
+    0.0,
+    185
+   ],
+   "first/adapt": [
+    0.5567010309278351,
+    97
+   ],
+   "first/find": [
+    0.0,
+    41
+   ],
+   "first/tidy": [
+    0.0,
+    222
+   ],
+   "query/0": [
+    0.2222222222222222,
+    90
+   ],
+   "query/1": [
+    0.23333333333333334,
+    90
+   ],
+   "query/3": [
+    0.1111111111111111,
+    90
+   ],
+   "query/7": [
+    0.06666666666666667,
+    90
+   ],
+   "query_task/adapt": [
+    0.25773195876288657,
+    97
+   ],
+   "query_task/find": [
+    0.12167300380228137,
+    263
+   ],
+   "single/adapt": [
+    0.75,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.2916666666666667,
+    48
+   ],
+   "single/sequence": [
+    0.0,
+    48
+   ],
+   "single/tidy": [
+    0.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 1166,
+   "strat_fail": 110,
+   "picked": 12,
+   "delivered": 11,
+   "strat_ok": 16,
+   "drawer_empty": 90,
+   "pressed": 14,
+   "cue_seq": 12,
+   "cue_count": 4,
+   "placed_bin": 5
+  },
+  "secs": 49.25931262969971
+ },
+ "learned_sleep/B4": {
+  "summary": {
+   "distractor/adapt": [
+    0.6698564593301436,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.336734693877551,
+    196
+   ],
+   "distractor/sequence": [
+    0.0,
+    205
+   ],
+   "distractor/tidy": [
+    0.0,
+    185
+   ],
+   "first/adapt": [
+    0.5567010309278351,
+    97
+   ],
+   "first/find": [
+    0.0,
+    41
+   ],
+   "first/tidy": [
+    0.0,
+    222
+   ],
+   "query/0": [
+    0.25555555555555554,
+    90
+   ],
+   "query/1": [
+    0.23333333333333334,
+    90
+   ],
+   "query/3": [
+    0.14444444444444443,
+    90
+   ],
+   "query/7": [
+    0.14444444444444443,
+    90
+   ],
+   "query_task/adapt": [
+    0.20618556701030927,
+    97
+   ],
+   "query_task/find": [
+    0.19011406844106463,
+    263
+   ],
+   "single/adapt": [
+    0.75,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.2916666666666667,
+    48
+   ],
+   "single/sequence": [
+    0.0,
+    48
+   ],
+   "single/tidy": [
+    0.0,
+    48
+   ]
+  },
+  "frac_frame": 0.39861111111111114,
+  "composition": {
+   "drawer": 819,
+   "strat_fail/frame": 73,
+   "strat_ok/frame": 60,
+   "picked/frame": 58,
+   "delivered/frame": 14,
+   "drawer/frame": 226,
+   "drawer_empty/frame": 85,
+   "session/frame": 10,
+   "drawer_empty": 38,
+   "pressed/frame": 34,
+   "placed_bin/frame": 14,
+   "cue_seq": 9
+  },
+  "secs": 54.25623035430908
+ },
+ "learned_split_sym/B4": {
+  "summary": {
+   "distractor/adapt": [
+    0.9760765550239234,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.7704081632653061,
+    196
+   ],
+   "distractor/sequence": [
+    0.25853658536585367,
+    205
+   ],
+   "distractor/tidy": [
+    0.005405405405405406,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.4878048780487805,
+    41
+   ],
+   "first/tidy": [
+    0.0045045045045045045,
+    222
+   ],
+   "query/0": [
+    0.5111111111111111,
+    90
+   ],
+   "query/1": [
+    0.4666666666666667,
+    90
+   ],
+   "query/3": [
+    0.37777777777777777,
+    90
+   ],
+   "query/7": [
+    0.4444444444444444,
+    90
+   ],
+   "query_task/adapt": [
+    0.7525773195876289,
+    97
+   ],
+   "query_task/find": [
+    0.33840304182509506,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.7083333333333334,
+    48
+   ],
+   "single/sequence": [
+    0.3125,
+    48
+   ],
+   "single/tidy": [
+    0.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 473,
+   "strat_fail": 140,
+   "strat_ok": 54,
+   "drawer_empty": 53
+  },
+  "secs": 71.81456780433655
+ },
+ "none/B8": {
+  "summary": {
+   "distractor/adapt": [
+    0.6698564593301436,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.2857142857142857,
+    196
+   ],
+   "distractor/sequence": [
+    0.0,
+    205
+   ],
+   "distractor/tidy": [
+    0.0,
+    185
+   ],
+   "first/adapt": [
+    0.5567010309278351,
+    97
+   ],
+   "first/find": [
+    0.0,
+    41
+   ],
+   "first/tidy": [
+    0.0,
+    222
+   ],
+   "query/0": [
+    0.0,
+    90
+   ],
+   "query/1": [
+    0.0,
+    90
+   ],
+   "query/3": [
+    0.0,
+    90
+   ],
+   "query/7": [
+    0.0,
+    90
+   ],
+   "query_task/adapt": [
+    0.0,
+    97
+   ],
+   "query_task/find": [
+    0.0,
+    263
+   ],
+   "single/adapt": [
+    0.75,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.2916666666666667,
+    48
+   ],
+   "single/sequence": [
+    0.0,
+    48
+   ],
+   "single/tidy": [
+    0.0,
+    48
+   ]
+  },
+  "frac_frame": NaN,
+  "composition": {},
+  "secs": 19.141052961349487
+ },
+ "recency_sym/B8": {
+  "summary": {
+   "distractor/adapt": [
+    0.9904306220095693,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.9438775510204082,
+    196
+   ],
+   "distractor/sequence": [
+    1.0,
+    205
+   ],
+   "distractor/tidy": [
+    1.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.9444444444444444,
+    90
+   ],
+   "query/1": [
+    0.35555555555555557,
+    90
+   ],
+   "query/3": [
+    0.0,
+    90
+   ],
+   "query/7": [
+    0.0,
+    90
+   ],
+   "query_task/adapt": [
+    0.27835051546391754,
+    97
+   ],
+   "query_task/find": [
+    0.34220532319391633,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    1.0,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "session": 360,
+   "drawer": 785,
+   "drawer_empty": 69,
+   "strat_fail": 102,
+   "strat_ok": 105,
+   "picked": 338,
+   "delivered": 232,
+   "cue_seq": 179,
+   "pressed": 270,
+   "cue_count": 62,
+   "placed_bin": 136
+  },
+  "secs": 42.2992160320282
+ },
+ "recency_frame/B8": {
+  "summary": {
+   "distractor/adapt": [
+    1.0,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.9540816326530612,
+    196
+   ],
+   "distractor/sequence": [
+    0.06341463414634146,
+    205
+   ],
+   "distractor/tidy": [
+    0.9945945945945946,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.5888888888888889,
+    90
+   ],
+   "query/1": [
+    0.06666666666666667,
+    90
+   ],
+   "query/3": [
+    0.011111111111111112,
+    90
+   ],
+   "query/7": [
+    0.0,
+    90
+   ],
+   "query_task/adapt": [
+    0.15463917525773196,
+    97
+   ],
+   "query_task/find": [
+    0.17110266159695817,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    0.020833333333333332,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 1.0,
+  "composition": {
+   "session/frame": 362,
+   "drawer/frame": 815,
+   "drawer_empty/frame": 75,
+   "strat_fail/frame": 88,
+   "strat_ok/frame": 115,
+   "picked/frame": 365,
+   "delivered/frame": 236,
+   "cue_seq/frame": 225,
+   "pressed/frame": 153,
+   "cue_count/frame": 63,
+   "placed_bin/frame": 141
+  },
+  "secs": 40.48722553253174
+ },
+ "random/B8": {
+  "summary": {
+   "distractor/adapt": [
+    0.9665071770334929,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.6530612244897959,
+    196
+   ],
+   "distractor/sequence": [
+    0.13658536585365855,
+    205
+   ],
+   "distractor/tidy": [
+    0.4756756756756757,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.9444444444444444,
+    90
+   ],
+   "query/1": [
+    0.6666666666666666,
+    90
+   ],
+   "query/3": [
+    0.34444444444444444,
+    90
+   ],
+   "query/7": [
+    0.2111111111111111,
+    90
+   ],
+   "query_task/adapt": [
+    0.5463917525773195,
+    97
+   ],
+   "query_task/find": [
+    0.5399239543726235,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    1.0,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "session": 477,
+   "drawer": 921,
+   "drawer_empty": 79,
+   "strat_fail": 174,
+   "strat_ok": 118,
+   "picked": 278,
+   "delivered": 182,
+   "pressed": 133,
+   "cue_seq": 151,
+   "cue_count": 46,
+   "placed_bin": 79
+  },
+  "secs": 44.66567134857178
+ },
+ "scripted_mem/B8": {
+  "summary": {
+   "distractor/adapt": [
+    0.9090909090909091,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.9489795918367347,
+    196
+   ],
+   "distractor/sequence": [
+    1.0,
+    205
+   ],
+   "distractor/tidy": [
+    1.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.9888888888888889,
+    90
+   ],
+   "query/1": [
+    0.9888888888888889,
+    90
+   ],
+   "query/3": [
+    0.7555555555555555,
+    90
+   ],
+   "query/7": [
+    0.2222222222222222,
+    90
+   ],
+   "query_task/adapt": [
+    0.7319587628865979,
+    97
+   ],
+   "query_task/find": [
+    0.7414448669201521,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    1.0,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 1310,
+   "drawer_empty": 117,
+   "strat_ok": 211,
+   "strat_fail": 77
+  },
+  "secs": 34.38987135887146
+ },
+ "scripted_mem_dropfail/B8": {
+  "summary": {
+   "distractor/adapt": [
+    0.6650717703349283,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.9489795918367347,
+    196
+   ],
+   "distractor/sequence": [
+    1.0,
+    205
+   ],
+   "distractor/tidy": [
+    1.0,
+    185
+   ],
+   "first/adapt": [
+    0.5567010309278351,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.8333333333333334,
+    90
+   ],
+   "query/1": [
+    0.9,
+    90
+   ],
+   "query/3": [
+    0.6777777777777778,
+    90
+   ],
+   "query/7": [
+    0.2222222222222222,
+    90
+   ],
+   "query_task/adapt": [
+    0.44329896907216493,
+    97
+   ],
+   "query_task/find": [
+    0.7376425855513308,
+    263
+   ],
+   "single/adapt": [
+    0.75,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    1.0,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": NaN,
+  "composition": {
+   "drawer": 1354,
+   "drawer_empty": 120,
+   "strat_ok": 157
+  },
+  "secs": 34.222851037979126
+ },
+ "oracle/B8": {
+  "summary": {
+   "distractor/adapt": [
+    0.7511961722488039,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.42346938775510207,
+    196
+   ],
+   "distractor/sequence": [
+    0.0,
+    205
+   ],
+   "distractor/tidy": [
+    0.04864864864864865,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.9444444444444444,
+    90
+   ],
+   "query/1": [
+    0.8666666666666667,
+    90
+   ],
+   "query/3": [
+    0.7888888888888889,
+    90
+   ],
+   "query/7": [
+    1.0,
+    90
+   ],
+   "query_task/adapt": [
+    0.8144329896907216,
+    97
+   ],
+   "query_task/find": [
+    0.9315589353612167,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    1.0,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 1105,
+   "drawer_empty": 92,
+   "session": 630,
+   "strat_ok": 127,
+   "strat_fail": 188,
+   "picked": 200,
+   "delivered": 134,
+   "cue_seq": 120,
+   "cue_count": 42
+  },
+  "secs": 46.07348895072937
+ },
+ "learned_both_sym/B8": {
+  "summary": {
+   "distractor/adapt": [
+    0.9186602870813397,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.9591836734693877,
+    196
+   ],
+   "distractor/sequence": [
+    1.0,
+    205
+   ],
+   "distractor/tidy": [
+    1.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.7555555555555555,
+    90
+   ],
+   "query/1": [
+    0.6555555555555556,
+    90
+   ],
+   "query/3": [
+    0.5666666666666667,
+    90
+   ],
+   "query/7": [
+    0.4777777777777778,
+    90
+   ],
+   "query_task/adapt": [
+    0.7938144329896907,
+    97
+   ],
+   "query_task/find": [
+    0.5475285171102662,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    1.0,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer_empty": 110,
+   "drawer": 1452,
+   "strat_ok": 279,
+   "strat_fail": 168,
+   "delivered": 143,
+   "picked": 171,
+   "session": 15,
+   "pressed": 197,
+   "cue_seq": 155,
+   "cue_count": 84,
+   "placed_bin": 106
+  },
+  "secs": 81.71899843215942
+ },
+ "learned_online_sym/B8": {
+  "summary": {
+   "distractor/adapt": [
+    0.9186602870813397,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.9438775510204082,
+    196
+   ],
+   "distractor/sequence": [
+    1.0,
+    205
+   ],
+   "distractor/tidy": [
+    1.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.9777777777777777,
+    90
+   ],
+   "query/1": [
+    0.7555555555555555,
+    90
+   ],
+   "query/3": [
+    0.4222222222222222,
+    90
+   ],
+   "query/7": [
+    0.26666666666666666,
+    90
+   ],
+   "query_task/adapt": [
+    0.7525773195876289,
+    97
+   ],
+   "query_task/find": [
+    0.5513307984790875,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    1.0,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "session": 269,
+   "drawer": 1087,
+   "drawer_empty": 105,
+   "strat_fail": 186,
+   "strat_ok": 180,
+   "picked": 123,
+   "delivered": 124,
+   "pressed": 161,
+   "cue_seq": 243,
+   "cue_count": 47,
+   "placed_bin": 106
+  },
+  "secs": 76.95132255554199
+ },
+ "learned_sleep_sym/B8": {
+  "summary": {
+   "distractor/adapt": [
+    0.6650717703349283,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.34183673469387754,
+    196
+   ],
+   "distractor/sequence": [
+    0.0,
+    205
+   ],
+   "distractor/tidy": [
+    0.0,
+    185
+   ],
+   "first/adapt": [
+    0.5567010309278351,
+    97
+   ],
+   "first/find": [
+    0.0,
+    41
+   ],
+   "first/tidy": [
+    0.0,
+    222
+   ],
+   "query/0": [
+    0.28888888888888886,
+    90
+   ],
+   "query/1": [
+    0.3111111111111111,
+    90
+   ],
+   "query/3": [
+    0.12222222222222222,
+    90
+   ],
+   "query/7": [
+    0.13333333333333333,
+    90
+   ],
+   "query_task/adapt": [
+    0.28865979381443296,
+    97
+   ],
+   "query_task/find": [
+    0.18631178707224336,
+    263
+   ],
+   "single/adapt": [
+    0.75,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.2916666666666667,
+    48
+   ],
+   "single/sequence": [
+    0.0,
+    48
+   ],
+   "single/tidy": [
+    0.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 1985,
+   "session": 88,
+   "strat_fail": 300,
+   "strat_ok": 54,
+   "picked": 25,
+   "delivered": 28,
+   "drawer_empty": 138,
+   "pressed": 51,
+   "cue_seq": 43,
+   "cue_count": 20,
+   "placed_bin": 32
+  },
+  "secs": 62.57728123664856
+ },
+ "learned_split_sym/B8": {
+  "summary": {
+   "distractor/adapt": [
+    0.9043062200956937,
+    209
+   ],
+   "distractor/count": [
+    0.9025641025641026,
+    195
+   ],
+   "distractor/find": [
+    0.9540816326530612,
+    196
+   ],
+   "distractor/sequence": [
+    1.0,
+    205
+   ],
+   "distractor/tidy": [
+    1.0,
+    185
+   ],
+   "first/adapt": [
+    1.0,
+    97
+   ],
+   "first/find": [
+    0.9024390243902439,
+    41
+   ],
+   "first/tidy": [
+    1.0,
+    222
+   ],
+   "query/0": [
+    0.9555555555555556,
+    90
+   ],
+   "query/1": [
+    0.8555555555555555,
+    90
+   ],
+   "query/3": [
+    0.7888888888888889,
+    90
+   ],
+   "query/7": [
+    0.7111111111111111,
+    90
+   ],
+   "query_task/adapt": [
+    0.9587628865979382,
+    97
+   ],
+   "query_task/find": [
+    0.779467680608365,
+    263
+   ],
+   "single/adapt": [
+    1.0,
+    48
+   ],
+   "single/count": [
+    0.9583333333333334,
+    48
+   ],
+   "single/find": [
+    0.9791666666666666,
+    48
+   ],
+   "single/sequence": [
+    1.0,
+    48
+   ],
+   "single/tidy": [
+    1.0,
+    48
+   ]
+  },
+  "frac_frame": 0.0,
+  "composition": {
+   "drawer": 1109,
+   "drawer_empty": 19,
+   "strat_ok": 215,
+   "strat_fail": 57,
+   "picked": 10,
+   "delivered": 1,
+   "pressed": 24,
+   "cue_seq": 1,
+   "cue_count": 4
+  },
+  "secs": 74.98329067230225
+ }
+}
