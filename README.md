@@ -1,4 +1,4 @@
-# Blame the Bowl, Not the Goldfish: Robot Memory Interference Is a Budget-Allocation Problem
+# Blame the Bowl, Not the Goldfish: Allocation, Position and Routing for Robot Memory Under Interference
 
 Han Lee, Stanford University. Paper: [`paper/blame_the_bowl.pdf`](paper/blame_the_bowl.pdf).
 
@@ -28,6 +28,8 @@ the scripts that produce every figure, table and statistic in the paper.
 | `results/robomme/*.json` | one row per evaluated episode: `task, split, system, k, same_scene, episode, success, steps, lesson_frac, same_frac, ...` |
 | `results/robomme/ft/` | fine-tuning study evaluations |
 | `results/pantry/` | Pantry sweeps, distortion tables and report |
+| `results/robomme/*_t7_*.json`, `*_t8_*.json`, `*_t9_*.json` | matched controls (appendix "Matched controls"): router ladder, comb isolation, index vs gap, session boundaries, allocation dose-response, same-task competitors |
+| `scripts/router_ladder_offline.py`, `scripts/sametask_offline.py` | offline router studies behind those controls (outputs in `results/robomme/*_offline.txt`) |
 | `paper/` | LaTeX source, figures, compiled PDF |
 
 ## Reproducing the paper from the result files (no GPU)
@@ -43,6 +45,8 @@ python scripts/plot_hard_routing.py results/robomme/hard_routing.png \
   "RouteStick|results/robomme/RouteStick_ss_v1.json|results/robomme/RouteStick_ss_v1_inrouter.json|results/robomme/RouteStick_ss_v1_loto.json|results/robomme/RouteStick_ss_v1_text03.json" \
   "PatternLock|results/robomme/PatternLock_ss_v1.json+results/robomme/PatternLock_v1.json|-|-|results/robomme/PatternLock_ss_v1_text03.json"
 python scripts/plot_robomme.py                          # success-vs-k curves (appendix)
+python scripts/make_controls_assets.py                  # appendix controls figure, interval table, fine-tuning gap table
+python scripts/plot_qualitative.py                      # appendix frames figure, from results/robomme/qual_frames.npz
 ```
 
 Result files behind each table: Table 1 (fine-tuning) `results/robomme/ft/{control,shift,interf}4k_*.json` and
@@ -86,7 +90,7 @@ python scripts/plot_sweep.py; python scripts/plot_distortion.py
 
 ```
 @article{lee2026bowl,
-  title  = {Blame the Bowl, Not the Goldfish: Robot Memory Interference Is a Budget-Allocation Problem},
+  title  = {Blame the Bowl, Not the Goldfish: Allocation, Position and Routing for Robot Memory Under Interference},
   author = {Lee, Han},
   year   = {2026}
 }

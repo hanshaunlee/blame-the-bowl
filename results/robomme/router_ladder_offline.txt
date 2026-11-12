@@ -1,0 +1,12 @@
+cell                             n   scene-only  instr-only  gate+instr  gate size  lesson in gate
+RouteStick hard test              50  0.06        0.92        0.96        4.0        1.00
+RouteStick hard val               50  0.04        0.82        0.84        4.0        1.00
+PatternLock hard test             50  0.02        0.66        0.92        4.0        1.00
+MoveCube hard test                50  0.00        0.42        0.42        4.0        0.96
+MoveCube hard val                 50  0.00        0.34        0.50        4.0        0.98
+VideoPlaceButton hard test        50  0.00        0.42        0.68        4.0        1.00
+RouteStick standard k=7           50  1.00        0.88        1.00        1.0        1.00
+PatternLock standard k=7          50  1.00        0.58        1.00        1.0        1.00
+MoveCube standard k=7,15         100  1.00        0.37        0.94        1.3        1.00
+VideoPlaceButton standard k=7     50  1.00        0.68        1.00        1.0        1.00
+VideoRepick standard k=7          50  1.00        0.34        1.00        1.0        1.00

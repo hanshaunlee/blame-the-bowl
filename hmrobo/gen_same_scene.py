@@ -24,6 +24,7 @@ def main():
     ap.add_argument("--data_dir", default="/vol/data")
     ap.add_argument("--cache", default="/vol/samescene")
     ap.add_argument("--max_steps", type=int, default=1300)
+    ap.add_argument("--pool", default="other", choices=["other", "same"], help="same: replay same-task motions (use --cache /vol/samescene_st)")
     a = ap.parse_args()
     runner = EnvRunner(a.task, "/tmp/videos", max_steps=a.max_steps)
     if a.split != "test":
@@ -42,7 +43,7 @@ def main():
             np.savez_compressed(lp, front=np.stack([pre["images"][i] for i in idx]), state=np.stack([pre["states"][i] for i in idx]),
                                 exec_front=pre["images"][-1], exec_state=pre["states"][-1], fingerprint=scene_fingerprint(pre["images"][0]), goal=str(pre["task_goal"]), L=L)
         for j in range(a.m):
-            same_scene_session(runner, ep, a.task, a.split, j, a.data_dir, a.cache)
+            same_scene_session(runner, ep, a.task, a.split, j, a.data_dir, a.cache, pool=a.pool)
         print(f"ep {ep} done ({time.time()-t0:.0f}s)", flush=True)
     print("done", flush=True)
 

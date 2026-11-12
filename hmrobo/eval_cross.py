@@ -38,20 +38,23 @@ def scene_fingerprint(img):
     return int(np.asarray(img, dtype=np.int64)[::8, ::8].sum())
 
 
-def same_scene_session(runner, episode_id, task, split, j, data_dir, cache_dir, n_src=256, stride=8):
+def same_scene_session(runner, episode_id, task, split, j, data_dir, cache_dir, n_src=256, stride=8, pool="other"):
     """A 32-frame session recorded in the *query episode's own scene*: the robot replays an unrelated motion
     (the post-demonstration joint actions of a recorded episode of another task) in this scene, after the lesson
-    video has played. Cached per (task, split, episode, j). Returns dict(front, state, fingerprint, src)."""
+    video has played. Cached per (task, split, episode, j). Returns dict(front, state, fingerprint, src).
+    pool="same": the replayed motion is another recorded episode of the *same* task (a same-task, same-scene competitor;
+    use a separate cache_dir)."""
     path = f"{cache_dir}/{task}/{split}/ep{episode_id}_{j}.npz"
     if os.path.exists(path):
         z = np.load(path)
         return dict(front=list(z["front"]), state=list(z["state"]), fingerprint=int(z["fingerprint"]), src=str(z["src"]))
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    srcs = [q for q in sorted(glob.glob(f"{data_dir}/record_dataset_*.h5")) if os.path.basename(q)[len("record_dataset_"):-3] != task]
+    dirs = [data_dir] + ([data_dir.rstrip("/") + "_extra"] if pool == "same" else [])   # same-task recordings may live in the router-training dir
+    srcs = [q for d_ in dirs for q in sorted(glob.glob(f"{d_}/record_dataset_*.h5")) if (os.path.basename(q)[len("record_dataset_"):-3] == task) == (pool == "same")][:None if pool != "same" else 1]
     rng = random.Random(7919 * episode_id + j)
     src = rng.choice(srcs)
     with h5py.File(src, "r") as f:
-        key = rng.choice(episode_keys(f)[:12])
+        key = rng.choice(episode_keys(f)[:12 if pool != "same" else 60])
     acts = load_actions(src, key, n=n_src)
     runner.make_env(episode_id)
     pre = runner.get_init_obs()
@@ -74,7 +77,7 @@ def same_scene_session(runner, episode_id, task, split, j, data_dir, cache_dir, 
     return dict(front=fronts, state=states, fingerprint=fp, src=f"{os.path.basename(src)}:{key}")
 
 
-def run_episode(client, runner, episode_id, k, system, units, rng, max_steps, shuffle_sessions=False, obs_horizon=16, same_scene=0, same_scene_kw=None):
+def run_episode(client, runner, episode_id, k, system, units, rng, max_steps, shuffle_sessions=False, obs_horizon=16, same_scene=0, same_scene_kw=None, boundary=""):
     extra = []
     if k > 0 and same_scene > 0:
         extra = [same_scene_session(runner, episode_id, j=j, **same_scene_kw) for j in range(min(same_scene, k))]
@@ -104,7 +107,15 @@ def run_episode(client, runner, episode_id, k, system, units, rng, max_steps, sh
     H = len(hf)
     if H:
         add_frames(client, hf, hs, exec_start_idx=H)
-    extra = {"memory_system": system, "phase_start": H, "lesson_bounds": lesson, "session_bounds": bounds}
+    sb = [list(b_) for b_ in bounds]
+    if boundary == "split":      # the manager sees the lesson as two sessions
+        j = sb.index(list(lesson)); mid = (lesson[0] + lesson[1]) // 2
+        sb[j:j + 1] = [[lesson[0], mid], [mid, lesson[1]]]
+    elif boundary == "merge" and len(sb) > 1:   # the manager sees the lesson and the adjacent session as one
+        j = sb.index(list(lesson)); j2 = j + 1 if j + 1 < len(sb) else j - 1
+        lo, hi = min(j, j2), max(j, j2)
+        sb[lo:hi + 1] = [[sb[lo][0], sb[hi][1]]]
+    extra = {"memory_system": system, "phase_start": H, "lesson_bounds": lesson, "session_bounds": sb}
     new_f, new_s = [img.copy()], [st.copy()]
     plan = deque(); count = 0; outcome = "timeout"; lf, ef, sf, n_inf = [], [], [], 0
     while True:
@@ -145,6 +156,8 @@ def main():
     ap.add_argument("--same_scene", type=int, default=0, help="number of the k distractor sessions that are recorded in the query scene itself (hard routing)")
     ap.add_argument("--same_scene_cache", default="/vol/samescene")
     ap.add_argument("--video_dir", default="/vol/eval_cross/videos")
+    ap.add_argument("--same_scene_pool", default="other", choices=["other", "same"], help="same: the in-scene replays are motions of the same task (use with --same_scene_cache /vol/samescene_st)")
+    ap.add_argument("--boundary", default="", choices=["", "split", "merge"], help="session boundaries given to the manager: lesson split in two | lesson merged with the adjacent session")
     a = ap.parse_args()
     os.makedirs(os.path.dirname(a.out), exist_ok=True)
     results = json.load(open(a.out)) if os.path.exists(a.out) else []
@@ -167,11 +180,11 @@ def main():
                 t0 = time.time()
                 try:
                     r = run_episode(client, runner, ep, k, system, units, rng, a.max_steps, a.shuffle_sessions, same_scene=a.same_scene,
-                                    same_scene_kw=dict(task=a.task, split=a.split, data_dir=a.data_dir, cache_dir=a.same_scene_cache))
+                                    same_scene_kw=dict(task=a.task, split=a.split, data_dir=a.data_dir, cache_dir=a.same_scene_cache, pool=a.same_scene_pool), boundary=a.boundary)
                 except Exception as e:
                     traceback.print_exc()
                     r = dict(outcome="error", success=False, steps=0, lesson_frac=float("nan"), exec_frac=float("nan"), n_hist=0, D=0, n_infer=0, goal=str(e)[:200])
-                r.update(system=system, k=k, task=a.task, episode=ep, secs=time.time() - t0, pool=a.distractor_pool, shuffled=a.shuffle_sessions, split=a.split, same_scene=a.same_scene)
+                r.update(system=system, k=k, task=a.task, episode=ep, secs=time.time() - t0, pool=a.distractor_pool, shuffled=a.shuffle_sessions, split=a.split, same_scene=a.same_scene, boundary=a.boundary, ss_pool=a.same_scene_pool)
                 results.append(r)
                 json.dump(results, open(a.out, "w"), indent=1)
                 print(f"{system:13s} k={k} ep={ep} -> {r['outcome']:8s} steps={r['steps']} lesson_frac={r['lesson_frac']:.2f} exec_frac={r['exec_frac']:.2f} same_frac={r.get('same_frac', float('nan')):.2f} match={r.get('scene_match')} ({r['secs']:.0f}s)", flush=True)

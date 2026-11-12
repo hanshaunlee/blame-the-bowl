@@ -1,0 +1,2 @@
+MoveCube_test.npz        n=50 scene-only 0.00  instr-only 0.50  gate+instr 0.46  instr-mean 0.12  gate size 4.0  lesson-minus-best-competitor instr score +0.000 (chance .25)
+RouteStick_test.npz      n=50 scene-only 0.00  instr-only 0.64  gate+instr 0.64  instr-mean 0.44  gate size 4.0  lesson-minus-best-competitor instr score +0.003 (chance .25)

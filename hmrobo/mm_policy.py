@@ -17,6 +17,15 @@ Memory systems (all fill the same 32-frame budget; the buffer holds every frame 
   text_route     label-free, instruction-conditioned: among the sessions whose frames match the current scene (within .05 of the best
                  scene similarity), the one whose frames best match the instruction in a joint image-text space (HF SigLIP); decided once per episode
   learned        FrameSelector over all frames
+Controls (tranche 7, see results/robomme/NOTES.md):
+  scene_route      text_route's encoder, scene score and one-decision-per-episode commitment, without the instruction (argmax scene)
+  text_route_shuf  text_route with the instruction of another task family (fixed per episode)
+  retrieval_once   retrieval (policy features), decided once per episode
+  alloc<b>[r]      dose-response: exactly b lesson slots (even; r = a random subset fixed per episode), 16 current-episode slots (even),
+                   the rest evenly over the distractor sessions; true positions
+  comb_dense, comb_stride<s>  the released sampler's lesson frames and slot counts at every step; only the layout of the
+                   current-episode slots changes (last m frames / last m frames at stride s)
+  <sys>_allshift<N>  same frames, every position moved later by N steps (lesson-to-episode gap preserved)
 """
 from __future__ import annotations
 import types
@@ -30,6 +39,15 @@ from hmrobo.selector import FrameSelector, pl_sample, pos_features, even_over, M
 from hmrobo.router import SessionRouter, route
 
 SPATIAL = "4x4"   # FrameSamp-Modul: 16 tokens per frame
+OTHER_INSTRUCTIONS = [   # RoboMME task goals (prefix stripped), for the wrong-instruction control
+    "move the cube to the target in the same manner as before",
+    "use the stick attached to the robot to navigate around the sticks on the table, following the same path",
+    "use the stick attached to the robot to retrace the same pattern",
+    "grasp the same end of the same peg you've picked before and insert it into the same side of the box",
+    "pick up the same block that was previously picked up again, finally put it down and press the button to stop",
+    "place the blue cube on the target right before the button was pressed",
+    "pick up the container hiding the blue cube",
+]
 
 
 def _feat(f):
@@ -115,17 +133,53 @@ class MemoryManager:
             a, b = map(int, lesson_bounds)
             w = ex[-(MEM // 2):]
             return sorted(even_over(list(range(a, b)), MEM - len(w)) + w)
-        if system in ("retrieval", "learned", "learned_route", "text_route") and F is None:
+        if system.startswith("alloc"):   # dose-response: b lesson slots, EX current-episode slots, the rest over the distractors
+            a, b = map(int, lesson_bounds)
+            self.last_session = (a, b)   # alloc<...>_reindex: lesson and current-episode positions compacted; distractor frames keep theirs
+            import re
+            if system.startswith("allocp"):   # allocp<f>: retrieval's own even comb over lesson + episode; only f% of its lesson slots kept, the freed slots go to the distractors
+                ref = even_over(list(range(a, b)) + ex)
+                l_ref, e_ref = [i for i in ref if a <= i < b], [i for i in ref if not a <= i < b]
+                nb = round(int(system[6:]) / 100 * len(l_ref))
+                l_sel = even_over(l_ref, nb) if nb > 0 else []
+                others = [i for i in range(int(H)) if not a <= i < b]
+                n_o = MEM - len(l_sel) - len(e_ref)
+                return sorted(l_sel + e_ref + (even_over(others, n_o) if n_o > 0 else []))
+            m_ = re.fullmatch(r"alloc(\d+)(r?)(?:e(\d+))?", system)   # alloc<b>[r][e<EX>]; EX defaults to half the budget
+            rand, nb, EX = bool(m_.group(2)), int(m_.group(1)), int(m_.group(3) or MEM // 2)
+            les = list(range(a, b))
+            if rand:
+                import random
+                l_sel = sorted(random.Random(7 * a + 13 * b + int(H)).sample(les, min(nb, len(les))))
+            else:
+                l_sel = even_over(les, nb) if nb > 0 else []
+            e_sel = even_over(ex, EX)
+            others = [i for i in range(int(H)) if not a <= i < b]
+            n_o = MEM - len(l_sel) - len(e_sel)
+            return sorted(l_sel + e_sel + (even_over(others, n_o) if n_o > 0 else []))
+        if system.startswith("comb_"):   # released sampler's history frames and counts; current-episode slots re-laid out
+            default = [int(i) for i in even_sampling_indices(T, MEM)]
+            hist = [i for i in default if i < int(H)]
+            m_e = len(default) - len(hist)
+            stride = 1 if system == "comb_dense" else int(system[len("comb_stride"):])
+            e_sel = ex[::-1][::stride][:m_e]
+            e_sel += [i for i in ex[::-1] if i not in set(e_sel)][:m_e - len(e_sel)]   # early in the episode: fill with the most recent
+            return sorted(hist + e_sel)
+        if system in ("retrieval", "retrieval_once", "learned", "learned_route", "text_route", "scene_route", "text_route_shuf") and F is None:
             F = self.features(allf)
-        if system == "text_route":
-            a, b = self.text_route(F, session_bounds, T)
+        if system in ("text_route", "scene_route", "text_route_shuf"):
+            a, b = self.text_route(F, session_bounds, T, mode={"text_route": "text", "scene_route": "scene", "text_route_shuf": "shuf"}[system])
             self.last_session = (a, b)
             return even_over(list(range(a, b)) + ex)
         if system == "learned_route":   # learned session router (trained with labels on the train split), label-free here
             a, b = map(int, session_bounds[route(self.router, F, session_bounds, T)])
             self.last_session = (a, b)
             return even_over(list(range(a, b)) + ex)
-        if system == "retrieval":
+        if system in ("retrieval", "retrieval_once"):
+            key = ("retrieval_once", tuple((int(a), int(b)) for a, b in session_bounds))
+            if system == "retrieval_once" and key in self._text_cache:
+                self.last_session = self._text_cache[key]
+                return even_over(list(range(*self.last_session)) + ex)
             f = F / (np.linalg.norm(F, axis=1, keepdims=True) + 1e-8)
             c = f[T]
             best, bs = None, -2.0
@@ -135,6 +189,9 @@ class MemoryManager:
                 if s > bs:
                     best, bs = (a, b), s
             self.last_session = best
+            if system == "retrieval_once":
+                self._text_cache[key] = best
+                print(f"retrieval_once -> session {[list(map(int, x)) for x in session_bounds].index(list(best))}", flush=True)
             return even_over(list(range(best[0], best[1])) + ex)
         if system == "learned":
             idxs, _ = self.learned(F, T, int(H), greedy=greedy, G=1)
@@ -164,7 +221,7 @@ class MemoryManager:
         return [v for v in e.values() if torch.is_tensor(v)][0]
 
     @torch.no_grad()
-    def text_route(self, F, session_bounds, T, max_frames=32):
+    def text_route(self, F, session_bounds, T, max_frames=32, mode="text"):
         """Scene gate, then instruction match, both in SigLIP's joint space (as the offline study): a session is a scene
         candidate if the best cosine between one of its frames and the current view is within .05 of the best session's;
         among candidates pick the session whose frames best match the instruction. Cached per episode (one decision).
@@ -172,7 +229,7 @@ class MemoryManager:
         so the gate admitted every session; see NOTES (text_route v0)."""
         import re
         from PIL import Image
-        key = (tuple((int(a), int(b)) for a, b in session_bounds), self._prompt)
+        key = (mode, tuple((int(a), int(b)) for a, b in session_bounds), self._prompt)
         if key in self._text_cache:
             return self._text_cache[key]
         m, proc, dev = self.siglip()
@@ -183,6 +240,10 @@ class MemoryManager:
             return torch.nn.functional.normalize(self._vec(m.get_image_features(pixel_values=px)).float(), dim=-1)
 
         instr = re.sub(r"^\s*watch the video carefully,?\s*then\s*", "", str(self._prompt or ""), flags=re.I).strip()
+        if mode == "shuf":   # control: the instruction of another task family, fixed per episode
+            import random
+            wrong = [w for w in OTHER_INSTRUCTIONS if w != instr]
+            instr = random.Random(sum(int(b) for _, b in session_bounds)).choice(wrong)
         tok = proc(text=[instr], padding="max_length", truncation=True, max_length=64, return_tensors="pt").to(dev)
         t = torch.nn.functional.normalize(self._vec(m.get_text_features(**tok)).float(), dim=-1)[0]
         cur = [i for i in self.raw if i <= T]
@@ -200,7 +261,9 @@ class MemoryManager:
         gate = scene >= scene.max() - margin
         cand = np.where(gate, text, -9.0)
         best = int(np.argmax(cand)) if cand.max() > -9 else int(np.argmax(scene))
-        print(f"text_route(m={margin}): '{instr[:50]}' scene {np.round(scene, 3).tolist()} gate {gate.astype(int).tolist()} text {np.round(text, 3).tolist()} -> session {best}", flush=True)
+        if mode == "scene":   # control: same encoder and commitment, no instruction
+            best = int(np.argmax(scene))
+        print(f"text_route[{mode}](m={margin}): '{instr[:50]}' scene {np.round(scene, 3).tolist()} gate {gate.astype(int).tolist()} text {np.round(text, 3).tolist()} -> session {best}", flush=True)
         self._text_cache[key] = (int(session_bounds[best][0]), int(session_bounds[best][1]))
         return self._text_cache[key]
 
@@ -261,7 +324,9 @@ class MemoryManager:
         self._prompt = obs.get("prompt", self._prompt)
         remap = None
         if mi is None and system is not None:
-            shift = 0
+            shift = allshift = 0
+            if "_allshift" in system:   # e.g. uniform_allshift480: same frames, every position moved later by N (gap preserved)
+                system, allshift = system.split("_allshift")[0], int(system.split("_allshift")[1])
             if "_shift" in system:   # e.g. uniform_shift224: same frames, current-episode positions moved later by N steps
                 system, shift = system.split("_shift")[0], int(system.split("_shift")[1])
             base = system[:-len("_reindex")] if system.endswith("_reindex") else system
@@ -271,6 +336,8 @@ class MemoryManager:
                 remap = self.compact_remap(self.last_session, H, mi)
             if shift:
                 remap = {int(i): int(i) + shift for i in mi if int(i) >= int(H)}
+            if allshift:
+                remap = {int(i): int(i) + allshift for i in mi}
         out = self._with_memory(mi, lambda: self._orig_infer(self.pol, obs), remap)
         if mi is not None:
             out["memory_indices"] = np.asarray(mi, dtype=np.int32)
